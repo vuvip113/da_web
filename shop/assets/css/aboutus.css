@@ -1,0 +1,234 @@
+.about {
+  background-image: url("../../images/about.jpg");
+  text-align: center;
+  /* display: flex; */
+}
+.about_us {
+  color: #ffffff;
+  letter-spacing: 10px;
+  font-size: 60px;
+  font-weight: bold;
+}
+.nd_about {
+  background-color: #ffffff;
+  width: 100%;
+  height: 400px;
+  padding: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.thunder {
+  width: 300px;
+  height: auto;
+}
+.nd_thunder img {
+  height: 80px;
+  width: 80px;
+  align-items: center;
+  margin-left: 100px;
+}
+.nd_thunder:hover img {
+  height: 81px;
+  width: 81px;
+}
+.c_about {
+  color: #000000;
+  margin-top: 35px;
+  letter-spacing: 7px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.c_about1 {
+  color: #000000;
+  padding: 20px;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.nd_thunder a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 85px;
+  position: relative;
+}
+.nd_about a:after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.nd_about a:hover::after {
+  width: 100%;
+}
+.anh_bia {
+  width: auto;
+  height: 800px;
+  background-image: url("../../images/pagse/aboutus/about.jpg");
+  background-size: cover;
+  background-position: left -500px;
+}
+.album {
+  padding: 50px 10px;
+  display: flex;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.h1-post-1-img img {
+  width: 470px;
+  height: 270px;
+  display: block;
+  transform: scale(1);
+  transition: 0.5s ease-in-out;
+  max-width: 470px;
+  overflow: hidden;
+}
+.h1-post-1-img {
+  overflow: hidden;
+}
+.h1-post-1-img:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.ngay {
+  color: #000000;
+  margin: 20px 0 10px 0;
+}
+.li_album1 {
+  color: #000000;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 10px 0 11px 0;
+}
+.nd_album_1 {
+  color: #000000;
+  letter-spacing: 0.5px;
+  width: 400px;
+  margin: 20px 0 30px;
+}
+.read_more {
+  text-decoration: none;
+  margin-top: 20px;
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+}
+.read_more:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: #000000;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+  color: #ffffff;
+}
+.read_more:hover::after {
+  color: #ffffff;
+  width: 100%;
+}
+.anh_sale {
+  width: auto;
+  height: 300px;
+  background-image: url("../../images/pagse/aboutus/anh_sale50.PNG");
+  background-size: cover;
+}
+
+.make_web {
+  padding: 100px;
+  user-select: none;
+}
+.chu_1 {
+  font-size: 16px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+.nd_make_web {
+  position: relative;
+}
+.chu_2 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  position: absolute;
+  padding: 20px;
+  background: #ffffff;
+  top: -45px;
+  left: 20px;
+  border: 2px solid #000000;
+}
+.anh_made_web {
+  border: 2px solid #000000;
+  display: flex;
+}
+.thanh {
+  margin: 100px;
+  position: relative;
+  width: 350px;
+}
+.st_anh_thanh {
+  display: block;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay:hover > * {
+  transform: translateY(0px);
+}
+.buithanh {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: #e8e6e3;
+}
+.web_developer {
+  font-size: 20px;
+  margin-top: 10px;
+  font-style: oblique;
+}
+.gt_banthan {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.st_cac_link img {
+  width: 25px;
+  height: 25px;
+  filter: invert(100%) sepia(0%) saturate(4128%) hue-rotate(185deg)
+    brightness(98%) contrast(85%);
+  margin-right: 25px;
+}
