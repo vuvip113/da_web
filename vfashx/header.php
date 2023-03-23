@@ -73,6 +73,34 @@ foreach ($result as $row) {
 		$statement1->execute(array($row['id']));
 	}
 }
+
+//format money
+function curformat($amount)
+{
+	// (A1) SPLIT WHOLE & DECIMALS
+	$amount = explode(".", $amount);
+	$whole = $amount[0];
+	// $decimal = isset($amount[1]) ? $amount[1] : "";
+
+	// (A2) ADD THOUSAND SEPARATORS
+	if (strlen($whole) > 3) {
+		$temp = "";
+		$j = 0;
+		for ($i = strlen($whole) - 1; $i >= 0; $i--) {
+			$temp = $whole[$i] . $temp;
+			$j++;
+			if ($j % 3 == 0 && $i != 0) {
+				$temp = "." . $temp;
+			}
+		}
+		$whole = $temp;
+	}
+
+	// (A3) RESULT
+	return "$whole";
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,6 +130,7 @@ foreach ($result as $row) {
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 	<?php
 
@@ -311,7 +340,7 @@ foreach ($result as $row) {
 							<div class="form-group">
 								<input type="text" class="form-control search-top" placeholder="<?php echo LANG_VALUE_2; ?>" name="search_text">
 							</div>
-							<button type="submit" class="btn btn-danger"><?php echo LANG_VALUE_3; ?></button>
+							<button type="submit" class="btn btn-danger"><i class="bi bi-search"></i> <?php echo LANG_VALUE_3; ?></button>
 						</form>
 					</div>
 
@@ -323,7 +352,7 @@ foreach ($result as $row) {
 	<div class="nav">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
@@ -388,14 +417,14 @@ foreach ($result as $row) {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
 								<?php
 								if (isset($_SESSION['customer'])) {
 								?>
-									<li><a><i class="fa fa-user"></i> <?php echo LANG_VALUE_13; ?> <?php echo $_SESSION['customer']['cust_name']; ?></a></li>
+									<li><a><i class="fa fa-user"> <?php echo $_SESSION['customer']['cust_name']; ?></a></li>
 									<li><a href="dashboard.php"><i class="fa fa-home"></i> <?php echo LANG_VALUE_89; ?></a></li>
 								<?php
 								} else {
@@ -405,29 +434,28 @@ foreach ($result as $row) {
 								<?php
 								}
 								?>
-
 								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_18; ?> (<?php
-																															if (isset($_SESSION['cart_p_id'])) {
-																																$table_total_price = 0;
-																																$i = 0;
-																																foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-																																	$i++;
-																																	$arr_cart_p_qty[$i] = $value;
-																																}
-																																$i = 0;
-																																foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-																																	$i++;
-																																	$arr_cart_p_current_price[$i] = $value;
-																																}
-																																for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-																																	$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-																																	$table_total_price = $table_total_price + $row_total_price;
-																																}
-																																echo $table_total_price;
-																															} else {
-																																echo '0.00';
-																															}
-																															?>₫)</a></li>
+																																																					if (isset($_SESSION['cart_p_id'])) {
+																																																						$table_total_price = 0;
+																																																						$i = 0;
+																																																						foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+																																																							$i++;
+																																																							$arr_cart_p_qty[$i] = $value;
+																																																						}
+																																																						$i = 0;
+																																																						foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+																																																							$i++;
+																																																							$arr_cart_p_current_price[$i] = $value;
+																																																						}
+																																																						for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+																																																							$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+																																																							$table_total_price = $table_total_price + $row_total_price;
+																																																						}
+																																																						echo curformat($table_total_price);
+																																																					} else {
+																																																						echo '0.00';
+																																																					}
+																																																					?><?php echo LANG_VALUE_164; ?>)</a></li>
 							</ul>
 						</div>
 					</div>

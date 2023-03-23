@@ -55,8 +55,6 @@ foreach ($result as $row) {
         ?>
     </ol>
 
-
-
     <!-- Wrapper For Slides -->
     <div class="carousel-inner" role="listbox">
 
@@ -111,23 +109,11 @@ foreach ($result as $row) {
         ?>
     </div>
 
-    <!-- Slider Left Control -->
-    <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-        <span class="fa fa-angle-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-
-    <!-- Slider Right Control -->
-    <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-        <span class="fa fa-angle-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-
 </div>
 
 
 <?php if ($home_service_on_off == 1) : ?>
-    <div class="service bg-gray">
+    <div class="service reveal bg-gray">
         <div class="container">
             <div class="row">
                 <?php
@@ -154,7 +140,7 @@ foreach ($result as $row) {
 <?php endif; ?>
 
 
-<div class="py-5">
+<div class="py-5 reveal">
     <div class="container">
         <div class="row">
             <div class="col-md-12 ">
@@ -191,10 +177,10 @@ foreach ($result as $row) {
                                                     <div class="text">
                                                         <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                                         <h4>
-                                                            <?php echo $row['p_current_price']; ?>₫
+                                                            <?php echo curformat($row['p_current_price']); ?><?php echo LANG_VALUE_164; ?>
                                                             <?php if ($row['p_old_price'] != '') : ?>
                                                                 <del>
-                                                                    <?php echo $row['p_old_price']; ?>₫
+                                                                    <?php echo curformat($row['p_old_price']); ?><?php echo LANG_VALUE_164; ?>
                                                                 </del>
                                                             <?php endif; ?>
                                                         </h4>
@@ -300,7 +286,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row reveal ">
                 <div class="col-md-12">
 
                     <div class="product-carousel">
@@ -319,10 +305,10 @@ foreach ($result as $row) {
                                 <div class="text">
                                     <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                     <h4>
-                                        <?php echo $row['p_current_price']; ?>₫
+                                        <?php echo curformat($row['p_current_price']); ?><?php echo LANG_VALUE_164; ?>
                                         <?php if ($row['p_old_price'] != '') : ?>
                                             <del>
-                                                <?php echo $row['p_old_price']; ?>₫
+                                                <?php echo curformat($row['p_old_price']); ?><?php echo LANG_VALUE_164; ?>
                                             </del>
                                         <?php endif; ?>
                                     </h4>
@@ -420,7 +406,7 @@ foreach ($result as $row) {
 
 
 
-<div class="py-5" style="background-image:url('assets/img/background.png'); width: 100%; height:100%px;margin-bottom: 50px;">
+<div class="py-5 reveal" style="background-image:url('assets/img/background.png'); width: 100%; height:100%px;margin-bottom: 50px;">
     <div class="nd_video">
         <div class="nd_video1">
             <h5>New Arrivals</h5>
@@ -436,7 +422,7 @@ foreach ($result as $row) {
 
 
 <?php if ($home_featured_product_on_off == 1) : ?>
-    <div class="product pt_70 pb_70">
+    <div class="product reveal pt_70 pb_70">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -465,10 +451,10 @@ foreach ($result as $row) {
                                 <div class="text">
                                     <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                     <h4>
-                                        <?php echo $row['p_current_price']; ?>₫
+                                        <?php echo curformat($row['p_current_price']); ?><?php echo LANG_VALUE_164; ?>
                                         <?php if ($row['p_old_price'] != '') : ?>
                                             <del>
-                                                <?php echo $row['p_old_price']; ?>₫
+                                                <?php echo curformat($row['p_old_price']); ?><?php echo LANG_VALUE_164; ?>
                                             </del>
                                         <?php endif; ?>
                                     </h4>
@@ -560,7 +546,7 @@ foreach ($result as $row) {
 
 
 <?php if ($home_popular_product_on_off == 1) : ?>
-    <div class="product pt_70 pb_70">
+    <div class="product reveal pt_70 pb_70">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -589,10 +575,10 @@ foreach ($result as $row) {
                                 <div class="text">
                                     <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                     <h4>
-                                        <?php echo $row['p_current_price']; ?>₫
+                                        <?php echo curformat($row['p_current_price']); ?><?php echo LANG_VALUE_164; ?>
                                         <?php if ($row['p_old_price'] != '') : ?>
                                             <del>
-                                                <?php echo $row['p_old_price']; ?>₫
+                                                <?php echo curformat($row['p_old_price']); ?><?php echo LANG_VALUE_164; ?>
                                             </del>
                                         <?php endif; ?>
                                     </h4>

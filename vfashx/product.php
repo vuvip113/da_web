@@ -453,9 +453,9 @@ if ($success_message1 != '') {
                                     <span style="font-size:14px;"><?php echo LANG_VALUE_54; ?></span><br>
                                     <span>
                                         <?php if ($p_old_price != '') : ?>
-                                            <del><?php echo $p_old_price; ?>₫</del>
+                                            <del><?php echo curformat($p_old_price); ?><?php echo LANG_VALUE_164; ?></del>
                                         <?php endif; ?>
-                                        <?php echo $p_current_price; ?>₫
+                                        <?php echo curformat($p_current_price); ?><?php echo LANG_VALUE_164; ?>
                                     </span>
                                 </div>
                                 <input type="hidden" name="p_current_price" value="<?php echo $p_current_price; ?>">
@@ -678,7 +678,7 @@ if ($success_message1 != '') {
                                     <?php echo $row['p_current_price']; ?>₫
                                     <?php if ($row['p_old_price'] != '') : ?>
                                         <del>
-                                            <?php echo $row['p_old_price']; ?>₫
+                                            <?php echo $row['p_old_price']; ?><?php echo LANG_VALUE_164; ?>
                                         </del>
                                     <?php endif; ?>
                                 </h4>
