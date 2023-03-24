@@ -20,7 +20,30 @@ foreach ($result as $row) {
 	<section class="home-newsletter">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
+				<footer class="col-md-6 footer-bs">
+					<div class="row">
+						<div class="col-md-6 footer-brand animated fadeInLeft">
+							<h2>Vfashx</h2>
+							<p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies.
+								Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut
+								sem.</p>
+
+						</div>
+						<div class="col-md-6 footer-nav animated fadeInUp">
+							<h4>Menu —</h4>
+							<div class="col-md-12">
+								<ul class="list">
+									<li><a style="text-decoration: none;" href="#">About Us</a></li>
+									<li><a style="text-decoration: none;" href="#">Contacts</a></li>
+									<li><a style="text-decoration: none;" href="#">Terms & Condition</a></li>
+									<li><a style="text-decoration: none;" href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</footer>
+				<div class="col-md-6 ">
 					<div class="single">
 						<?php
 						if (isset($_POST['form_subscribe'])) {

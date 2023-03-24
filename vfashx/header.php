@@ -131,7 +131,6 @@ function curformat($amount)
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
 	<?php
 
 	$statement = $pdo->prepare("SELECT * FROM tbl_page WHERE id=1");
@@ -313,16 +312,11 @@ function curformat($amount)
 				</div>
 				<!-- <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 4%;">
 					<div class="right">
-
-
 						<ul>
 							<li><i class="fa fa-phone"></i> <?php echo $contact_phone; ?></li>
 							<li><i class="fa fa-envelope-o"></i> <?php echo $contact_email; ?></li>
 						</ul>
-
 					</div>
-
-
 				</div> -->
 				<div class="col-md-4 search-area">
 					<div class="row">
@@ -352,7 +346,7 @@ function curformat($amount)
 	<div class="nav">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
@@ -411,20 +405,19 @@ function curformat($amount)
 
 								<li><a href="about.php"><?php echo $about_title; ?></a></li>
 								<li><a href="faq.php"><?php echo $faq_title; ?></a></li>
-
 								<li><a href="contact.php"><?php echo $contact_title; ?></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 pl_0 pr_0">
 					<div class="menu-container">
 						<div class="menu">
 							<ul>
 								<?php
 								if (isset($_SESSION['customer'])) {
 								?>
-									<li><a><i class="fa fa-user"> <?php echo $_SESSION['customer']['cust_name']; ?></a></li>
+									<li><a><i class="fa fa-user"></i> <?php echo $_SESSION['customer']['cust_name']; ?></a></li>
 									<li><a href="dashboard.php"><i class="fa fa-home"></i> <?php echo LANG_VALUE_89; ?></a></li>
 								<?php
 								} else {
@@ -435,27 +428,27 @@ function curformat($amount)
 								}
 								?>
 								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_18; ?> (<?php
-																																																					if (isset($_SESSION['cart_p_id'])) {
-																																																						$table_total_price = 0;
-																																																						$i = 0;
-																																																						foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-																																																							$i++;
-																																																							$arr_cart_p_qty[$i] = $value;
-																																																						}
-																																																						$i = 0;
-																																																						foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-																																																							$i++;
-																																																							$arr_cart_p_current_price[$i] = $value;
-																																																						}
-																																																						for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-																																																							$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-																																																							$table_total_price = $table_total_price + $row_total_price;
-																																																						}
-																																																						echo curformat($table_total_price);
-																																																					} else {
-																																																						echo '0.00';
-																																																					}
-																																																					?><?php echo LANG_VALUE_164; ?>)</a></li>
+																															if (isset($_SESSION['cart_p_id'])) {
+																																$table_total_price = 0;
+																																$i = 0;
+																																foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+																																	$i++;
+																																	$arr_cart_p_qty[$i] = $value;
+																																}
+																																$i = 0;
+																																foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+																																	$i++;
+																																	$arr_cart_p_current_price[$i] = $value;
+																																}
+																																for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+																																	$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+																																	$table_total_price = $table_total_price + $row_total_price;
+																																}
+																																echo curformat($table_total_price);
+																															} else {
+																																echo '0.00';
+																															}
+																															?><?php echo LANG_VALUE_164; ?>)</a></li>
 							</ul>
 						</div>
 					</div>

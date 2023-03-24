@@ -404,9 +404,7 @@ foreach ($result as $row) {
 <?php endif; ?>
 
 
-
-
-<div class="py-5 reveal" style="background-image:url('assets/img/background.png'); width: 100%; height:100%px;margin-bottom: 50px;">
+<div class="py-5" style="background-image:url('assets/img/background.png'); width: 100%; height:100%px;margin-bottom: 50px;">
     <div class="nd_video">
         <div class="nd_video1">
             <h5>New Arrivals</h5>
@@ -414,12 +412,25 @@ foreach ($result as $row) {
 
             <button class="button-81" role="button">Shop now</button>
         </div>
-        <div class="nd_video2">
+        <div class="nd_video2 reveal">
             <iframe width="700" height="400" src="https://www.youtube.com/embed/2iidlwQ-NfU?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
+<div style="background-color: antiquewhite; padding: 5px;s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <h4 data-aos="fade-down" style="font-size: 50px;">Not Sure Where To Begin?</h4>
+                <p class="animate__animated animate__shakeX" style="font-size: 20px;">
+                    <a href="" style="text-decoration: none;text-transform: uppercase;background-color: white;padding: 10px 30px;display: inline-block;color: black;margin-top: 15px;">START
+                        HERE</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php if ($home_featured_product_on_off == 1) : ?>
     <div class="product reveal pt_70 pb_70">
