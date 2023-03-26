@@ -36,6 +36,16 @@ foreach ($result as $row) {
 	$after_body = $row['after_body'];
 }
 
+$statement = $pdo->prepare("SELECT * FROM tbl_date");
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row) {
+	$date = $row['date'];
+	$month = $row['month'];
+	$year = $row['year'];
+}
+
+
 // Checking the order table and removing the pending transaction that are 24 hours+ old. Very important
 $current_date_time = date('Y-m-d H:i:s');
 $statement = $pdo->prepare("SELECT * FROM tbl_payment WHERE payment_status=?");
@@ -428,27 +438,27 @@ function curformat($amount)
 								}
 								?>
 								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo LANG_VALUE_18; ?> (<?php
-																															if (isset($_SESSION['cart_p_id'])) {
-																																$table_total_price = 0;
-																																$i = 0;
-																																foreach ($_SESSION['cart_p_qty'] as $key => $value) {
-																																	$i++;
-																																	$arr_cart_p_qty[$i] = $value;
-																																}
-																																$i = 0;
-																																foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
-																																	$i++;
-																																	$arr_cart_p_current_price[$i] = $value;
-																																}
-																																for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
-																																	$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
-																																	$table_total_price = $table_total_price + $row_total_price;
-																																}
-																																echo curformat($table_total_price);
-																															} else {
-																																echo '0.00';
-																															}
-																															?><?php echo LANG_VALUE_164; ?>)</a></li>
+																																																					if (isset($_SESSION['cart_p_id'])) {
+																																																						$table_total_price = 0;
+																																																						$i = 0;
+																																																						foreach ($_SESSION['cart_p_qty'] as $key => $value) {
+																																																							$i++;
+																																																							$arr_cart_p_qty[$i] = $value;
+																																																						}
+																																																						$i = 0;
+																																																						foreach ($_SESSION['cart_p_current_price'] as $key => $value) {
+																																																							$i++;
+																																																							$arr_cart_p_current_price[$i] = $value;
+																																																						}
+																																																						for ($i = 1; $i <= count($arr_cart_p_qty); $i++) {
+																																																							$row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
+																																																							$table_total_price = $table_total_price + $row_total_price;
+																																																						}
+																																																						echo curformat($table_total_price);
+																																																					} else {
+																																																						echo '0.00';
+																																																					}
+																																																					?><?php echo LANG_VALUE_164; ?>)</a></li>
 							</ul>
 						</div>
 					</div>

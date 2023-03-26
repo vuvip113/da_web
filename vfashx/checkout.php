@@ -113,20 +113,20 @@ if (!isset($_SESSION['cart_p_id'])) {
                                     <td><?php echo $arr_cart_p_name[$i]; ?></td>
                                     <td><?php echo $arr_cart_size_name[$i]; ?></td>
                                     <td><?php echo $arr_cart_color_name[$i]; ?></td>
-                                    <td><?php echo $arr_cart_p_current_price[$i]; ?>₫</td>
+                                    <td><?php echo curformat($arr_cart_p_current_price[$i]); ?><?php echo LANG_VALUE_164; ?></td>
                                     <td><?php echo $arr_cart_p_qty[$i]; ?></td>
                                     <td class="text-right">
                                         <?php
                                         $row_total_price = $arr_cart_p_current_price[$i] * $arr_cart_p_qty[$i];
                                         $table_total_price = $table_total_price + $row_total_price;
                                         ?>
-                                        <?php echo $row_total_price; ?>₫
+                                        <?php echo curformat($row_total_price); ?><?php echo LANG_VALUE_164; ?>
                                     </td>
                                 </tr>
                             <?php endfor; ?>
                             <tr>
                                 <th colspan="7" class="total-text"><?php echo LANG_VALUE_81; ?></th>
-                                <th class="total-amount"><?php echo $table_total_price; ?>₫</th>
+                                <th class="total-amount"><?php echo curformat($table_total_price); ?><?php echo LANG_VALUE_164; ?></th>
                             </tr>
                             <?php
                             $statement = $pdo->prepare("SELECT * FROM tbl_shipping_cost WHERE country_id=?");
@@ -148,7 +148,7 @@ if (!isset($_SESSION['cart_p_id'])) {
                             ?>
                             <tr>
                                 <td colspan="7" class="total-text"><?php echo LANG_VALUE_84; ?></td>
-                                <td class="total-amount"><?php echo $shipping_cost; ?>₫</td>
+                                <td class="total-amount"><?php echo curformat($shipping_cost); ?><?php echo LANG_VALUE_164; ?></td>
                             </tr>
                             <tr>
                                 <th colspan="7" class="total-text"><?php echo LANG_VALUE_82; ?></th>
@@ -156,7 +156,7 @@ if (!isset($_SESSION['cart_p_id'])) {
                                     <?php
                                     $final_total = $table_total_price + $shipping_cost;
                                     ?>
-                                    <?php echo $final_total; ?>₫
+                                    <?php echo curformat($final_total); ?><?php echo LANG_VALUE_164; ?>
                                 </th>
                             </tr>
                         </table>

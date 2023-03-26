@@ -286,7 +286,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
             </div>
-            <div class="row reveal ">
+            <div class="row  ">
                 <div class="col-md-12">
 
                     <div class="product-carousel">
@@ -297,7 +297,7 @@ foreach ($result as $row) {
                         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($result as $row) {
                         ?>
-                            <div class="item">
+                            <div class="item reveal">
                                 <div class="thumb">
                                     <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
                                     <div class="overlay"></div>

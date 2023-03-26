@@ -238,7 +238,7 @@ foreach ($result as $row) {
 	let minutes = document.getElementById('minutes');
 	let seconds = document.getElementById('seconds');
 
-	let endDate = '01/01/2024 00:00:00';
+	let endDate = '<?php echo $month; ?>/<?php echo $date; ?>/<?php echo $year; ?> 00:00:00';
 
 	let x = setInterval(function() {
 		let now = new Date(endDate).getTime();
