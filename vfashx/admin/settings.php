@@ -1765,7 +1765,7 @@ foreach ($result as $row) {
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="" class="col-sm-2 control-label"></label>
+                                        <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
                                             <button type="submit" class="btn btn-success pull-left" name="form11">Update</button>
                                         </div>

@@ -24,7 +24,7 @@
 		<script src="js/clipboard.min.js"></script>
 		<script src="js/demo.js"></script>
 		<script src="js/summernote.js"></script>
-
+		<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('#editor1').summernote({

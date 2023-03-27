@@ -61,7 +61,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Products</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-android-cart"></i>
+					<!-- <i class="ionicons ion-android-cart"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/slkvcfos.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -76,7 +78,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Pending Orders</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-clipboard"></i>
+					<!-- <i class="ionicons ion-clipboard"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/nocovwne.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -91,7 +95,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Completed Orders</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-android-checkbox-outline"></i>
+					<!-- <i class="ionicons ion-android-checkbox-outline"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/jvihlqtw.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -106,7 +112,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Completed Shipping</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-checkmark-circled"></i>
+					<!-- <i class="ionicons ion-checkmark-circled"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/lupuorrc.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -121,7 +129,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Pending Shippings</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-load-a"></i>
+					<!-- <i class="ionicons ion-load-a"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/xjovhxra.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -136,7 +146,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Active Customers</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-person-stalker"></i>
+					<!-- <i class="ionicons ion-person-stalker"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/uqpazftn.json" colors="primary:#121331,secondary:#000000" trigger="hover" colors="primary:#121331,secondary:#242424" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -151,7 +163,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Subscriber</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-person-add"></i>
+					<!-- <i class="ionicons ion-person-add"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/uukerzzv.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -166,7 +180,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Available Shippings</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-location"></i>
+					<!-- <i class="ionicons ion-location"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/zzcjjxew.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -181,7 +197,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Top Categories</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-arrow-up-b"></i>
+					<!-- <i class="ionicons ion-arrow-up-b"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/mtdulhdc.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -196,7 +214,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>Mid Categories</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-android-menu"></i>
+					<!-- <i class="ionicons ion-android-menu"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/vcoyflbj.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
@@ -211,7 +231,9 @@ $total_order_complete_shipping_pending = $statement->rowCount();
 					<p>End Categories</p>
 				</div>
 				<div class="icon">
-					<i class="ionicons ion-arrow-down-b"></i>
+					<!-- <i class="ionicons ion-arrow-down-b"></i> -->
+					<lord-icon src="https://cdn.lordicon.com/igpsgesd.json" colors="primary:#121331,secondary:#000000" trigger="hover" style="width:120px;height:120px">
+					</lord-icon>
 				</div>
 
 			</div>
